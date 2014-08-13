@@ -621,7 +621,7 @@ ERROR
 
       load_bower_cache
 
-      pipe("./node_modules/bower/bin/bower install --config.storage.packages=vendor/bower/packages --config.storage.registry=vendor/bower/registry --config.tmp=vendor/bower/tmp 2>&1")
+      pipe("./node_modules/bower/bin/bower install --allow-root --config.storage.packages=vendor/bower/packages --config.storage.registry=vendor/bower/registry --config.tmp=vendor/bower/tmp 2>&1")
       if $?.success?
         log "bower", :status => "success"
         puts "Cleaning up the bower tmp."
